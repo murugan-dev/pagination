@@ -32,11 +32,14 @@ const Pagination = () => {
     
     </div>
     <div className="pagination">
-      <span>◀</span>
+      <span onClick={()=>selectPage(page - 1)}>◀</span>
     {
-      [...Array(productData.length/10)].map((_, idx)=> <span  onClick={()=>selectPage(idx+1)} key={idx}>{idx+1}</span>)
+      [...Array(productData.length/10)].map((_, idx)=> <span onClick={()=>selectPage(idx+1)} 
+      key={idx}
+      className={page===idx+1 ? "selected__page" : " "}
+      >{idx+1}</span>)
     }
-    <span>▶</span>
+    <span onClick={()=>selectPage(page + 1)}>▶</span>
     </div>
     </>
    

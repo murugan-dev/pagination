@@ -42,3 +42,9 @@
   border: 2px solid black;
   cursor: pointer;
 }
+
+.selected__page{
+  background-color: black;
+  color: #ffff;
+  font-weight: bold;
+}
